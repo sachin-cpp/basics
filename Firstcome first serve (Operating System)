@@ -1,0 +1,109 @@
+#include <iostream>
+using namespace std;
+
+
+
+//void swap( int x, int y)
+//    {
+//        temp=A[i];
+//        A[i]=A[i+1];
+//        A[i+1]=temp;
+//    }
+    
+int main()
+{
+    
+    int processes =0 , temp =0 ;
+    
+    cout<<"total number of processes";
+    cin>>processes;
+    
+    int A[processes]={0} ,  B[processes]={0} ,P[processes]={0} ,tat[processes]={0} , wt[processes]={0} ;
+    
+    
+    
+    for(int i=0;i<processes;i++)
+    {
+        cin>>P[i]>>B[i]>>A[i];
+    }
+    
+    int min = 0;
+    for(int i=0;i<processes;i++)
+    {
+        min=i;
+        for(int j=i;j<processes;j++)
+        {
+            
+       if(A[j]<A[min])
+        {
+            //swap(A[i],A[i+1]);
+            {
+                temp=A[j];
+                A[j]=A[min];
+                A[min]=temp;
+            }
+            //swap(B[i],B[i+1]);
+            {
+                temp=B[j];
+                B[j]=B[min];
+                B[min]=temp;
+            }
+            //swap(P[i],P[i+1]);
+            {
+                temp=P[j];
+                P[j]=P[min];
+                P[min]=temp;
+            }
+            
+        }
+        
+        }
+      //  cout<<P[i]<<" ";
+        //cout<<A[i]<<" ";
+        //cout<<B[i]<<" "<<endl;
+    }
+    
+    int tat_avg = 0 , wt_avg = 0;
+    
+    
+    
+    
+   for(int i=2;i>=0;i--)
+   {
+       for(int j=0;j<=i;j++)
+       {
+           tat[i] += B[j] ;
+           //cout<<j<<"j"<<endl;
+           //cout<<tat[i]<<"tat_1"<<endl;
+       }
+       tat[i] -= A[i];
+       //cout<<tat[i]<<"tat"<<endl;
+       tat_avg += tat[i];
+       cout<<tat_avg/processes;
+       
+       
+       
+       wt[i] = tat[i] - B[i];
+       //cout<<wt[i]<<"wt"<<endl;
+       wt_avg += wt[i];
+       cout<<wt_avg/processes;
+       
+       
+   }
+  
+  /*  for(int i=0;i<processes;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            tat[i] = tat[i] + B[j] ;
+            cout<<j;
+        }
+        tat[i]=tat[i] - A[i];
+    }
+   */
+
+
+
+
+    return 0;
+}
