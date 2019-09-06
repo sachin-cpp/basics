@@ -1,0 +1,94 @@
+ 
+#include <iostream>
+using namespace std;
+
+
+
+//void swap( int x, int y)
+//    {
+//        temp=A[i];
+//        A[i]=A[i+1];
+//        A[i+1]=temp;
+//    }
+    
+int main()
+{
+    
+    int processes =0 , temp =0 ;
+    
+    cout<<"total number of processes";
+    cin>>processes;
+    
+    int A[processes]={0} ,  B[processes]={0} ,P[processes]={0} ,tat[processes]={0} , wt[processes]={0} ;
+    
+    
+    
+    for(int i=0;i<processes;i++)
+    {
+        cin>>P[i]>>B[i]>>A[i];
+    }
+    
+    int min = 0;
+    for(int i=0;i<processes;i++)
+    {
+        min=i;
+        for(int j=i;j<processes;j++)
+        {
+            
+       if(A[j]<A[min])
+        {
+            //swap(A[i],A[i+1]);
+            {
+                temp=A[j];
+                A[j]=A[min];
+                A[min]=temp;
+            }
+            //swap(B[i],B[i+1]);
+            {
+                temp=B[j];
+                B[j]=B[min];
+                B[min]=temp;
+            }
+            //swap(P[i],P[i+1]);
+            {
+                temp=P[j];
+                P[j]=P[min];
+                P[min]=temp;
+            }
+            
+        }
+        
+        }
+        cout<<P[i]<<" ";
+        cout<<B[i]<<" ";
+        cout<<A[i]<<" "<<endl;
+    }
+    
+    for (int i=0 ;i <processes ; i++)
+    {
+        if(diff == 0)
+        diff = A[i+1] -A[i];
+        
+        else 
+        diff = diff;
+        
+        
+            if((B[i]-diff) > B[i+1])
+            {
+                if(B[i] > diff)
+                B[i] -= diff;
+                
+                else if(B[i] = diff)
+                comp_time = A[i] - diff ;
+                
+                else if(B[i] < diff)
+                diff -= B[i];
+            }
+        }
+       
+    }
+    
+    
+    
+    
+}
