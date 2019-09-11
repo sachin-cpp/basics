@@ -1,0 +1,100 @@
+#include <iostream>
+using namespace std;
+
+
+
+//void swap( int x, int y)
+//    {
+//        temp=A[i];
+//        A[i]=A[i+1];
+//        A[i+1]=temp;
+//    }
+    
+int main()
+{
+    
+    int processes =0 , temp =0 ;
+    
+    cout<<"total number of processes";
+    cin>>processes;
+    
+    int A[processes]={0} ,  B[processes]={0} ,P[processes]={0} ,tat[processes]={0} , wt[processes]={0} ;
+    
+    
+    
+    for(int i=0;i<processes;i++)
+    {
+        cin>>P[i]>>B[i]>>A[i];
+    }
+    
+    int min = 0;
+    for(int i=0;i<processes;i++)
+    {
+        min=i;
+        for(int j=i;j<processes;j++)
+        {
+            
+       if(A[j]<A[min])
+        {
+            //swap(A[i],A[i+1]);
+            {
+                temp=A[j];
+                A[j]=A[min];
+                A[min]=temp;
+            }
+            //swap(B[i],B[i+1]);
+            {
+                temp=B[j];
+                B[j]=B[min];
+                B[min]=temp;
+            }
+            //swap(P[i],P[i+1]);
+            {
+                temp=P[j];
+                P[j]=P[min];
+                P[min]=temp;
+            }
+            
+        }
+        
+        }
+        cout<<P[i]<<" ";
+        cout<<A[i]<<" ";
+        cout<<B[i]<<" "<<endl;
+        
+        
+        for(int j = A[i] ; j<A[i+1] ; j++)
+        {
+            compare ( B[] )
+            for(int k=0;k<(flag[i]==1))
+            
+            if(B[i] smallest)
+            {
+                B[i] = B[i] - (j - A[i]); 
+            }
+            
+            
+            
+            if(j == A[i+1])
+            {
+            //flag[i+1] = 1;
+            comp[i+1] = B[i];
+            i++;
+            }
+        }
+        
+        int compare( comp[] )
+        {
+            for(int k=0 ; k<processes  ;k++)
+            {
+                Min=k;
+                for(int l=k+1;l<    ; l++)
+                {
+                    if(comp[Min] == comp[l])
+                    return comp[Min];
+                }
+            }
+        }
+        
+    }
+}
