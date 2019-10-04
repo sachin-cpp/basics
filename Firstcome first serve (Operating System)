@@ -19,8 +19,7 @@ int main()
     cin>>processes;
     
     int A[processes]={0} ,  B[processes]={0} ,P[processes]={0} ,tat[processes]={0} , wt[processes]={0} ;
-    
-    
+   
     
     for(int i=0;i<processes;i++)
     {
