@@ -81,7 +81,7 @@ int main()
     
      t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
-    printf("Quick Sort took %f seconds to execute \n", time_taken);
+    printf("Merge Sort took %f seconds to execute \n", time_taken);
   
     printf("\nSorted array is \n"); 
     printArray(arr, arr_size); 
